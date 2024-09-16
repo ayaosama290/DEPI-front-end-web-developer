@@ -1,0 +1,18 @@
+<div class="container">
+
+    <form class="row my-3 gy-3">
+        <div class="col-6">
+            <input type="text" [(ngModel)]="model.title" id="title" #title
+               name="title" class="form-control" placeholder="title">
+        </div>
+        <div class="col-6">
+            <input type="text" class="form-control" [(ngModel)]="model.description" name="description" placeholder="description">
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" (click)="handleSubmit()">Add Post</button>
+            <button class="btn btn-primary ms-2" (click)="updateSubmit('heeeee')">Edit Post</button>
+            <input type="text"  >
+        </div>
+    
+    </form>
+</div>
