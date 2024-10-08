@@ -1,0 +1,147 @@
+
+<nav class="navbar navbar-expand navbar-light border-end border-secondary-subtle" style="background-color: white;">
+
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div >
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item dropend">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Woman's Fashion
+        </a>
+        
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+           <li><a class="dropdown-item" href="#">Another action</a></li>
+           <li><div class="dropdown-divider"></div></li>
+           <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li> -->
+
+
+
+
+
+
+
+
+
+      
+      <!-- Default dropend button -->
+      <li class="btn-group dropend" *ngFor="let category of listCategories">
+        <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+          {{category.name}}
+        </a>
+        <ul class="dropdown-menu" >
+          <!-- Dropdown menu links -->
+           <li *ngFor="let sub of category.subcategories">
+            <a class="dropdown-item" href="#">{{sub.name}}</a>
+          </li>
+        </ul>
+      </li>
+
+
+       <!-- Default dropend button
+       <li class="btn-group dropend">
+        <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+          Men's Fashion
+        </a>
+        <ul class="dropdown-menu">
+          Dropdown menu links 
+           <li><a class="dropdown-item" href="#">Action</a></li>
+           <li><a class="dropdown-item" href="#">Another action</a></li>
+           <div class="dropdown-divider"></div>
+           <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li> -->
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Electronics<!--<span class="sr-only">(current)</span>--></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home & Lifestyle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Medicine</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sports & Outdoor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Baby's & Toys</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Groceries & Pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Healthy & Beauty</a>
+      </li>
+    </ul>
+  </div>
+</nav><!--end of navbar-->
+
+
+
+<div class="carou">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images\pngtree-black-atmosphere-iphone-xs-apple-promotional-poster-image_908535.jpg" class="d-block w-100 image" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images\pngtree-an-iphone-is-next-to-an-apple-on-a-black-surface-picture-image_3171736.jpg" class="d-block w-100 image" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images\iphone-apple-communication-mobile.jpg" class="d-block w-100 image" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+
+
+
+<div>
+    <h1 class="categories-header">categories</h1>
+    <h2>Browse By Category</h2>
+    <div class="row">
+      <!-- <div class="col-12 d-flex justify-content-center">
+        <img src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif" alt="">
+
+      </div> -->
+        <div class="col-md-2 my-3" *ngFor="let category of categories ">
+            <div class="card" routerLink="/home/{{category.category_data.category_id}}">
+                <!-- routerLink="{{category.category_data.category_id}}/productDetails" -->
+                <div class="card-body mx-auto">
+                    <h3>{{category.category_data.category_name}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

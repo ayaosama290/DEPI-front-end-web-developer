@@ -1,0 +1,39 @@
+<div class="row justify-content-between my-5">
+    <div class=" col-md-7">
+        <img src="https://s3-alpha-sig.figma.com/img/75f3/94c0/a1c7dc5b68a42239311e510f54d8cd59?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cKLwTFza9lEV7ZTGX2rqTOwNG1tydw8NHXF~vIlve48wGjP0TPgv7zKRAcex14U5R9OPprErhtQmpz-suzImdRIhQUh0p4Yn3wHrb5iv~HLF5cKv9tNMZvldANF1jMkN8pGx4jGfwboECLkEzSYhRr~BvNdn1cRx6IiqfRx3c0siI0vQTlEMyIIjfgIq-U8ITMZ1OUqYwvbm019gHF~RXQv0oofnlxGeNWT8EdbezJDX3N51bC-ylZflLU90C1WCr5mslk0GVhjEiHCY1z55d~CXQalavR6slq2w953BDaZVSSd6zvXeLIb8pqL4WrMMeEgoQqEWh9MsXGnHuTWI3g__" alt="" class="side-image">
+    </div>
+    <div class="col-md-4 formDiv">
+        <h1>Log in to Exclusive</h1>
+        <p>Enter your details below</p>
+        <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+            <div class="alert alert-danger col-12" *ngIf="errorMsg">
+                {{errorMsg}}
+            </div>
+            <div class="col-12 my-3">
+                <input type="email" class="form-control formInput my-2" formControlName="email" placeholder="Email">
+                <div class="alert alert-danger" *ngIf="userData.email.invalid && (isSubmitted || userData.email.dirty)">
+                    <div *ngIf="userData.email.errors?.['required']">
+                        email is required
+                    </div>
+                    <div *ngIf="userData.email.errors?.['email']">
+                        invalid email
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="password" class="form-control formInput my-2" formControlName="password" placeholder="Password">
+                <div class="alert alert-danger" *ngIf="userData.password.invalid && (isSubmitted || userData.password.dirty)">
+                    <div *ngIf="userData.password.errors?.['required']">
+                        password is required
+                    </div>
+                    <div *ngIf="userData.password.errors?.['pattern']">
+                        Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-danger my-3 w-100">login</button>
+            </div>
+        </form>
+    </div>
+</div>

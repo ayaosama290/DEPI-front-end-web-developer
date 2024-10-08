@@ -1,0 +1,20 @@
+.custom-border{
+    border: 2px dashed lightgrey;
+    /* width: 50%; */
+}
+@media(min-width: 768px){
+    .custom-border{
+        width: 50%;
+    }
+}
+.icon{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.add-address{
+    font-size: 2rem;
+    text-align: center;
+}

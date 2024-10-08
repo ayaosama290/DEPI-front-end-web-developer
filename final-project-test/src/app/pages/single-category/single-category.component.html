@@ -1,0 +1,11 @@
+<h2>Category Name</h2>
+<div class="row">
+    <div class="col-md-3" *ngFor="let single of singleCategory">
+        <div class="card my-3" routerLink="/product/{{single.id}}">
+            <img src="{{single.image}}" class="card-img-top">
+            <div class="card-body">
+              <p class="card-text">{{single.name}}</p>
+            </div>
+          </div>
+    </div>
+</div>

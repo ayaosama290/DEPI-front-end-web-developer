@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg my-3 fixed-top" style="background-color: white;">
+  <div class="container border-bottom border-secondary-subtle pb-2">
+    <a class="navbar-brand" routerLink>Exclusive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="home" routerLinkActive="text-underline"
+           [routerLinkActiveOptions]="{'exact' : true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" routerLinkActive="text-underline">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="text-underline">About</a>
+        </li>
+        <li class="nav-item" *ngIf="!global.isLogin">
+          <a class="nav-link" routerLink="signUp" routerLinkActive="text-underline" >Sign Up</a>
+        </li>
+        <li class="nav-item" *ngIf="global.isLogin">
+          <a class="nav-link" routerLink="signUp" routerLinkActive="text-underline" (click)="handleLogout()">Log out</a>
+        </li>
+      </ul>
+      <form class="d-flex search-form" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success search-icon" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <ul class="icons" *ngIf="global.isLogin">
+        <li class="nav-item icon">
+          <fa-icon class="nav-link" routerLink="/wish-list" [icon]="faHeart"></fa-icon>
+        </li>
+        <li class="nav-item icon">
+          <fa-icon class="nav-link" routerLink="/cart" [icon]="faCartShopping"></fa-icon>
+        </li>
+        <li class="nav-item icon">
+          <div class="dropdown">
+            <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button" > -->
+              <!-- Dropdown link
+            </a> -->
+            <fa-icon class="nav-link dropdown-toggle"  [icon]="faUser" data-bs-toggle="dropdown" aria-expanded="false"></fa-icon>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" routerLink="/profile">Manage My Account</a></li>
+              <li><a class="dropdown-item" href="#">My Order</a></li>
+              <li><a class="dropdown-item" href="#">My Cancaellations</a></li>
+              <li><a class="dropdown-item" href="#">My Reviews</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

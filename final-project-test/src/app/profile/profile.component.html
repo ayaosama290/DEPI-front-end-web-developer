@@ -1,0 +1,35 @@
+<div class="container justify-content-between">
+    <div class="row my-5">
+        <div class="col-md-3">
+            <h4><span class="text-secondary">Home /</span> My Account</h4>
+
+        </div>
+        <div class="col-md-7">
+
+        </div>
+        <div class="col-md-2">
+            <h4>Welcome <span class="text-danger">{{global.fullName}}</span></h4>
+        </div>
+
+    </div>
+    
+    <div class="row">
+        <div class="col-3">
+            <h4>Manage My Account</h4>
+            <ul class="list-unstyled">
+                <li routerLink="/profile">My Profile</li>
+                <li routerLink="/profile/addresses">Address Book</li>
+                <li>My Payment Options</li>
+            </ul>
+            <h4>My Orders</h4>
+            <ul class="list-unstyled">
+                <li>My Returns</li>
+                <li>My Cancellations</li>
+            </ul>
+            <h4>My WishList</h4>
+        </div>
+        <div class="col-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

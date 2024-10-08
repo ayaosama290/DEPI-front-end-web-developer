@@ -1,0 +1,25 @@
+.img-qr{
+    width: 70px;
+    height: 70px;
+}
+.side-img{
+    width: 40px;
+    height: 60px;
+    display: block;
+}
+.side-img-1{
+    width: 40px;
+    /* height: 72px; */
+    display: block;
+    position: absolute;
+    right: 4%;
+    bottom: 25%;
+}
+.search-icon{
+    position: absolute;
+    right: 4%;
+    border: none;
+}
+.search-form{
+    position: relative;
+}

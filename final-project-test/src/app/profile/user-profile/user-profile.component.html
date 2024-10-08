@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-body">
+        <h4>Edit Your Profile</h4>
+        <form [formGroup]="personalDataForm">
+            <div class="row my-2">
+                <div class="col-12 col-md-6 my-2">
+
+                    <label for="firstName" class="my-1 fw-medium">First Name</label>
+                    <input type="text" class="form-control half-width" name="firstName" id="firstName" formControlName="customer_first_name" placeholder="Md">
+                    
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <label for="lastName" class="my-1 fw-medium">Last Name</label>
+                    <input type="text" class="form-control half-width" name="lastName" id="lastName" placeholder="Rimel" formControlName="customer_last_name">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <label for="userEmail"  class="my-1 fw-medium">Email</label>
+                    <input type="email" class="form-control" name="userEmail" id="userEmail" placeholder="rimel1111@gmail.com" formControlName="customer_email" >
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <label for="userPhone" class="my-1 fw-medium">Phone</label>
+                    <input type="text" class="form-control" name="userPhone" id="userPhone" placeholder="01234567896" formControlName="customer_phone">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <button class="btn btn-danger">Save Changes</button>
+                </div>
+            </div>      
+            
+        </form>
+        <form action="">
+            <div class="row ">
+                <div class="col-12">
+                    <label for="userPassword">Password Changes</label>
+                    <input type="password" class="form-control my-3" name="userPassword" id="userPassword" placeholder="Current Password" aria-label="Disabled input example" disabled>
+                    <input type="password" class="form-control my-3" name="newPassword" id="newPassword" placeholder="New Password" aria-label="Disabled input example" disabled>
+                    <input type="password" class="form-control my-3" name="confirmNewPassword" id="confirmNewPassword" placeholder="Confirm New Password" aria-label="Disabled input example" disabled>
+                </div>
+                <div class="col-12 col-md-6">
+                    <button class="btn btn-danger me-2">Save Changes</button>
+                </div>
+            </div>
+            
+            
+        </form>
+    </div>
+</div>

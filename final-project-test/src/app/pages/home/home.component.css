@@ -1,0 +1,63 @@
+.navbar .container-fluid,
+.navbar-expand-lg .navbar-collapse,
+.navbar-expand-lg .navbar-nav{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+      width: 20%;
+      height: 75.2vh;
+    }
+    form input {
+      margin-bottom: 0.7em;
+    }
+  }
+
+.navbar {
+  align-items: flex-start;
+  /* border-right: 1px solid gray; */
+}
+.navbar-expand .navbar-nav {
+  flex-direction: column;
+}
+.carousel[_ngcontent-ng-c2949391922] {
+  
+  
+}
+.carou{
+  width: 66%;
+  position: absolute;
+  right: 7%;
+  top: 19%;
+}
+
+@media (max-width: 992px) {
+  .carousel {
+    width: 100%;
+    /* position: relative; */
+  }
+  form input {
+    margin-bottom: 0.7em;
+  }
+}
+.categories-header{
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  padding-left: 1%;
+  margin: 2%;
+  border-left: 10px red solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.image{
+  height: 550px;
+}
+.newcard{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  /* padding: 8px; */
+}

@@ -1,0 +1,29 @@
+.search-icon{
+    position: absolute;
+    right: 4%;
+    border: none;
+}
+.search-form{
+    position: relative;
+}
+.fixed-top{
+    position: sticky !important;
+}
+.icon{
+    list-style: none;
+    /* margin-right: 6%; */
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-size: 1.2rem;
+    
+}
+.icons{
+    /* margin-top: 2%; */
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    height: 1rem;
+}
+.text-underline{
+    text-decoration: underline;
+}

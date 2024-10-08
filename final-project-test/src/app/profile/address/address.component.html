@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-body">
+        <h4>Edit Your Address</h4>
+        <form [formGroup]="addressForm">
+            <div class="row my-2">
+                <div class="col-12 my-2">
+                    <ng-select [items]="countries" 
+                        bindLabel="name" 
+                        bindValue="id" 
+                        formControlName="country_id"
+                        placeholder="Choose Country"
+                        (change)="handleGovernorate($event)"
+                        (clear)="handleClear()">
+                    </ng-select>
+                </div>
+                <div class="col-12 my-2">
+                    <ng-select [items]="governorates"
+                        bindLabel="name" 
+                        bindValue="id" 
+                        formControlName="state_id"
+                        placeholder="Choose Governorate"
+                        [readonly]="stateGovernorate"
+                        (change)="handleCities($event)"
+                        (clear)="handleCLearGovernorates()">
+                    </ng-select>
+                </div>
+                <div class="col-12 my-2">
+                    <ng-select [items]="cities"
+                        bindLabel="name_en" 
+                        bindValue="id" 
+                        formControlName="city_id"
+                        placeholder="Choose City"
+                        [readonly]="stateCities">
+                    </ng-select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
